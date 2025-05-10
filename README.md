@@ -46,23 +46,17 @@ A web-based application designed to facilitate course reservations for students 
 # 🏗 Technical Architecture
 
 The Course Reservation System is designed using a **Model-View-Controller (MVC)** architecture to separate concerns, improve maintainability, and scale efficiently.
-<pre>
+
  ```mermaid 
  graph LR
-    A[User (Browser)]
-    B[Frontend (HTML/CSS/JavaScript)]
-    C[Backend (Node.js + Express)]
-    D[Routing & Controllers]
-    E[(MongoDB Database)]
-
-    A --> B
-    B --> C
-    C --> D
-    D --> E
-
+  A[(Browser)] --> B[Frontend]
+    B --> C[HTML/CSS/JavaScript]
+    B --> D[Backend]
+    D --> E[Node.js + Express]
+    D --> F[Routing & Controllers]
+    F --> G[(MongoDB Database)]
 
 ``` 
-</pre>
 ---
 
 ## 🧩 Components Overview
