@@ -1,0 +1,145 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Heading Section */
+  .content {
+    text-align: center;
+    padding: 40px 20px 20px;
+  }
+  
+  .content h1 {
+    font-size: 3rem;
+    color: #0056b3;
+  }
+  
+  /* Intro Section */
+  .skill-intro {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 40px 5%;
+    flex-wrap: wrap;
+  }
+  
+  .skill-text {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .skill-text p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #333;
+  }
+  
+  .skill-image {
+    flex: 1;
+    min-width: 280px;
+  }
+  
+  .skill-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* List Section */
+  .course-highlights {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    text-align: left;
+    color: #444;
+    font-size: 1.05rem;
+  }
+  
+  .course-highlights ul {
+    list-style-position: inside;
+    padding-left: 0;
+  }
+  
+  .course-highlights li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+  
+  /* Section Headings */
+  .section-heading {
+    font-size: 1.8rem;
+    color: #222;
+    margin: 40px 20px 20px;
+    padding-left: 10px;
+    border-left: 5px solid #0056b3;
+  }
+  
+  /* Course Container (Vertical Layout) */
+  .course-scroll-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 5%;
+  }
+  
+  /* Course Card */
+  .course-card {
+    width: 100%;
+  max-width: 700px;
+  padding: 25px 30px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin: 0 auto;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+  background-image: linear-gradient(135deg, rgba(0, 136, 255, 0.2), rgba(0, 255, 198, 0.2));
+  }
+  
+  .course-card:hover {
+    transform: scale(1.03) rotateX(3deg);
+  background-image: linear-gradient(135deg, rgba(0, 136, 255, 0.4), rgba(0, 255, 198, 0.4));
+  box-shadow: 0 12px 36px rgba(0, 136, 255, 0.3);
+  }
+  
+  .course-card h4 {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #000000;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .content h1 {
+      font-size: 2rem;
+    }
+  
+    .course-card {
+      width: 100%;
+      font-size: 1rem;
+    }
+  
+    .section-heading {
+      font-size: 1.5rem;
+    }
+  }
+  

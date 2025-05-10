@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Reservation System</title>
+    <link rel="stylesheet" href="css/courseregistration.css">
+    <link rel="icon" href="img/COURSE.jpg">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Free Course Reservation System</h1>
+            <p>Reserve your spot in upcoming free courses</p>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- Student Reservation Section -->
+        <div id="student-section" class="section active">
+            <div id="reservation-form-container">
+                <h2>Free Course Reservation Form</h2>
+                
+                <div class="steps">
+                    <div class="step active" data-step="1">
+                        <div class="step-number">1</div>
+                        <div class="step-title">Personal Details</div>
+                    </div>
+                    <div class="step" data-step="2">
+                        <div class="step-number">2</div>
+                        <div class="step-title">Course Details</div>
+                    </div>
+                    <div class="step" data-step="3">
+                        <div class="step-number">3</div>
+                        <div class="step-title">Confirmation</div>
+                    </div>
+                </div>
+                
+                <div class="success-message" id="reservation-success">
+                    Reservation submitted successfully! You will receive a confirmation email soon.
+                </div>
+                
+                <div class="error-message" id="reservation-error">
+                    There was an error submitting your reservation. Please try again.
+                </div>
+                
+                <form id="student-reservation-form">
+
+                    <!-- Step 1: Personal Details -->
+                    <div class="form-step active" data-step="1">
+                        <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                         <div class="form-group">
+                            <label for="sur-name">Sur Name *</label>
+                            <input type="text" id="sur-name" name="sur-name" required>
+                        </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="dob">Date of Birth *</label>
+                            <input type="date" id="dob" name="dob" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address">Address *</label>
+                            <textarea id="address" name="address" rows="3" required></textarea>
+                        </div>
+                        
+                        <div class="form-buttons">
+                            <button type="button" class="next-step">Next</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2: Course Details -->
+<div class="form-step" data-step="2">
+    <div class="form-group">
+        <label for="duration">Course Duration *</label>
+        <select id="duration" name="duration" required>
+            <option value="">-- Please choose --</option>
+            <option value="2 months">2 months</option>
+            <option value="4 months">4 months</option>
+            <option value="6 months">6 months</option>
+            <option value="8 months">8 months</option>
+            <option value="1 year">One year</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="preferred-date">Preferred Start Date *</label>
+        <input type="date" id="preferred-date" name="preferred-date" required>
+    </div>
+
+    <div class="form-group">
+        <label for="level">Course Level *</label>
+        <select id="level" name="level" required>
+            <option value="">-- Please choose --</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="schedule">Class Schedule (Days and Time) *</label>
+        <input type="text" id="schedule" name="schedule" placeholder="e.g., Mon-Wed-Fri, 6–8 PM" required>
+    </div>
+
+    <div class="form-group">
+        <label for="learn-mode">Learning Mode *</label>
+        <select id="learn-mode" name="learn-mode" required>
+            <option value="">-- Please choose --</option>
+            <option value="Mentorship">Mentorship</option>
+            <option value="Self-learn">Self-learn</option>
+        </select>
+    </div>
+
+    <div class="form-buttons">
+        <button type="button" class="prev-step">Back</button>
+        <button type="button" class="next-step">Next</button>
+    </div>
+</div>
+
+
+                    <!-- Step 3: Confirmation -->
+                    <div class="form-step" data-step="3">
+                        <h3>Review Your Reservation</h3>
+                        <p>Please confirm that all your details are correct before submitting.</p>
+                        
+                        <div id="review-details">
+                            <!-- Summary will be populated dynamically using JS -->
+                        </div>
+
+                        <div class="form-buttons">
+                            <button type="button" class="prev-step">Back</button>
+                            <button type="submit">Submit Reservation</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/courseregistration.js"></script>
+</body>
+</html>

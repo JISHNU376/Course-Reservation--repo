@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Course Reservation - Home</title>
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="icon" href="img/COURSE.jpg">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">🎓 CourseHub</div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search Courses..." />
+    </div>
+    <div class="profile">
+      <a href="login.html" class="no-underline"><img src="img/Profile.jpg" alt="User" /></a>
+    </div>
+  </header>
+
+  <section class="scroll" >
+    <div class="hero-banner">
+ <!-- Hero Scroll Container with Scroll Buttons -->
+<div class="hero-container">
+    <button class="scroll-btn left-btn">&#8592;</button>
+  
+    <section class="hero-scroll" id="heroScroll">
+      <div class="hero-slide">
+        <div class="hero-text">
+          <h1>Mastering Communication and Teamwork Skills</h1>
+          <p>Improve your communication and other vital soft skills for career growth.</p>
+          <a href="skills.html"><button>Explore Skills</button></a>
+
+        </div>
+        <div class="hero-img">
+          <img src="img/Skills.jpg" alt="Graduate 1" />
+        </div>
+      </div>
+    
+      <div class="hero-slide">
+        <div class="hero-text">
+          <h1>Learn Anytime, Anywhere</h1>
+          <p>Practice while learning with real-world projects and case studies.</p>
+          <a href="program.html"><button>Start Learning</button></a>
+        </div>
+        <div class="hero-img">
+          <img src="img/Program.jpeg" alt="Graduate 2" />
+        </div>
+      </div>
+    
+      <div class="hero-slide">
+        <div class="hero-text">
+          <h1>Build Skills with Hands-On Projects</h1>
+          <p>Practice while learning with real-world projects and case studies.</p>
+          <a href="project.html"><button>View Courses</button></a>
+        </div>
+        <div class="hero-img">
+          <img src="img/Project.jpg" alt="Graduate 3" />
+        </div>
+      </div>
+    </section>
+  
+    <button class="scroll-btn right-btn">&#8594;</button>
+  </div>
+  
+  <!-- Scroll Button Script -->
+  <script>
+    window.addEventListener('load', () => {
+      const scrollContainer = document.getElementById('heroScroll');
+      const leftBtn = document.querySelector('.left-btn');
+      const rightBtn = document.querySelector('.right-btn');
+  
+      const slideWidth = window.innerWidth;
+      const totalSlides = 3; // Only 3 real slides
+  
+      updateButtons(); // Initial check
+  
+      // Scroll left
+      leftBtn.addEventListener('click', () => {
+        scrollContainer.scrollBy({
+          left: -slideWidth,
+          behavior: 'smooth'
+        });
+      });
+  
+      // Scroll right
+      rightBtn.addEventListener('click', () => {
+        scrollContainer.scrollBy({
+          left: slideWidth,
+          behavior: 'smooth'
+        });
+      });
+  
+      // Update buttons visibility on scroll
+      scrollContainer.addEventListener('scroll', () => {
+        // Add slight delay to wait until scroll position settles
+        setTimeout(updateButtons, 200);
+      });
+  
+      function updateButtons() {
+        const currentIndex = Math.round(scrollContainer.scrollLeft / slideWidth);
+  
+        // Hide left button on first slide
+        leftBtn.style.visibility = currentIndex === 0 ? 'hidden' : 'visible';
+  
+        // Hide right button on last slide
+        rightBtn.style.visibility = currentIndex === totalSlides - 1 ? 'hidden' : 'visible';
+      }
+    });
+  </script>
+  
+  <div class="content">
+  <h3>Learn fundamental skills with</h3>
+  <h1>Free Online Courses</h1>
+  <p>Gain basic concepts with free online courses across new-age domains.</p>
+</div>
+
+<section class="home-section">
+  <div class="main-layout">
+     <!-- Course Grid -->
+     <div class="course-grid">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h3>Popular Courses</h3>
+      <ul>
+        <li><a href="ChatGPT and Generative AI.html" class="no-underline">ChatGPT and Generative AI</a></li>
+        <li><a href="Artificial Intelligence.html" class="no-underline">Artificial Intelligence</a></li>
+        <li><a href="Machine Learning.html" class="no-underline">Machine Learning</a></li>
+        <li><a href="Data Science.html" class="no-underline">Data Science</a></li>
+        <li><a href="Digital Marketing.html" class="no-underline">Digital Marketing</a></li>
+        <li><a href="Cyber Security.html" class="no-underline">Cyber Security</a></li>
+        <li><a href="Cloud Computing.html" class="no-underline">Cloud Computing</a></li>
+      </ul>
+    </div>
+
+    <!-- Course Grid -->
+    <div class="course-grid">
+      <div class="course-card">
+        <span class="badge">FREE</span>
+        <img src="img/Prompt.jpg" alt="Course Thumbnail" />
+        <h4>Prompt Engineering for ChatGPT</h4>
+        <p>★ 4.57 · 88K+ learners</p>
+        <p>1.5 hrs</p>
+        <a href="courseregistration.html">View Course</a>
+      </div>
+
+      <div class="course-card">
+        <span class="badge">FREE</span>
+        <img src="img/humanresource.jpeg" alt="Course Thumbnail" />
+        <h4>Human Resource Management</h4>
+        <p>★ 4.6 · 1.9L+ learners</p>
+        <p>1.5 hrs</p>
+        <a href="courseregistration.html">View Course</a>
+      </div>
+
+      <div class="course-card">
+        <span class="badge">FREE</span>
+        <img src="img/Excel.jpg" alt="Course Thumbnail" />
+        <h4>Excel for Beginners</h4>
+        <p>★ 4.48 · 13.2L+ learners</p>
+        <p>4.5 hrs</p>
+        <a href="courseregistration.html">View Course</a>
+      </div>
+
+      <div class="course-card">
+        <span class="badge">FREE</span>
+        <img src="img/sql.jpg" alt="Course Thumbnail" />
+        <h4>SQL for Data Science</h4>
+        <p>★ 4.51 · 1.5L+ learners</p>
+        <p>3 hrs</p>
+        <a href="courseregistration.html">View Course</a>
+      </div>
+
+      <div class="course-card">
+        <span class="badge">FREE</span>
+        <img src="img/chatgpt.jpg" alt="Course Thumbnail" />
+        <h4>ChatGPT for Beginners</h4>
+        <p>★ 4.55 · 3.2L+ learners</p>
+        <p>8 hrs</p>
+        <a href="courseregistration.html">View Course</a>
+      </div>
+
+      <div class="course-card">
+        <span class="badge">FREE</span>
+        <img src="img/PowerBI.jpg" alt="Course Thumbnail" />
+        <h4>Data Visualization with powerBI</h4>
+        <p>★ 4.52 · 2.7L+ learners</p>
+        <p>2 hrs</p>
+        <a href="courseregistration.html">View Course</a>
+      </div>
+
+      <div class="view-all-container">
+</div>
+
+<div class="view-all-container">
+  <a href="course.html" class="view-all-btn">View All Courses</a>
+</div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<div class="content">
+  <h1>Trending Now</h1>
+</div>
+<section class="home-section">
+  <!-- Horizontal Scroll View -->
+  <div class="course-scroll-container">
+    <div class="trending-course-card">
+      <span class="badge">FREE</span>
+      <img src="img/UI-Designer.png" alt="Course Thumbnail" />
+      <h4>UI/UX Design for Beginners</h4>
+      <p>★ 4.53 · 3.5L+ learners</p>
+      <p>1 hrs</p>
+      <a href="courseregistration.html">View Course</a>
+    </div>
+    <div class="trending-course-card">
+      <span class="badge">FREE</span>
+      <img src="img/BI.png" alt="Course Thumbnail" />
+      <h4>Business Intelligence Using Excel</h4>
+      <p>★ 4.52 · 13.6K+ learners</p>
+      <p>1.5 hrs</p>
+      <a href="courseregistration.html">View Course</a>
+    </div>
+    <div class="trending-course-card">
+      <span class="badge">FREE</span>
+      <img src="img/Microsoft-Azure.jpg" alt="Course Thumbnail" />
+      <h4>Microsoft Azure Application</h4>
+      <p>★ 4.52 · 19.8K+ learners</p>
+      <p>2 hrs</p>
+      <a href="courseregistration.html">View Course</a>
+    </div>
+    <div class="trending-course-card">
+      <span class="badge">FREE</span>
+      <img src="img/ProM.jpeg" alt="Course Thumbnail" />
+      <h4>Project Management</h4>
+      <p>★ 4.57 · 1.7L+ learners</p>
+      <p>1.5 hrs</p>
+      <a href="courseregistration.html">View Course</a>
+    </div>
+    <div class="trending-course-card">
+      <span class="badge">FREE</span>
+      <img src="img/Prompt.jpg" alt="Course Thumbnail" />
+      <h4>Prompt Engineering for ChatGPT</h4>
+      <p>★ 4.57 · 88K+ learners</p>
+      <p>1.5 hrs</p>
+      <a href="courseregistration.html">View Course</a>
+    </div>
+    <div class="trending-course-card">
+      <span class="badge">FREE</span>
+      <img src="img/AI.png" alt="Course Thumbnail" />
+      <h4>AI Ethics for Beginners</h4>
+      <p>★ 4.48 · 3.3K+ learners</p>
+      <p>1.5 hrs</p>
+      <a href="courseregistration.html">View Course</a>
+    </div>
+    <div class="trending-course-card">
+      <span class="badge">FREE</span>
+      <img src="img/Supplychain.jpg" alt="Course Thumbnail" />
+      <h4>Supply chain Management</h4>
+      <p>★ 4.58 · 76.7K+ learners</p>
+      <p>1.5 hrs</p>
+      <a href="courseregistration.html">View Course</a>
+    </div>
+    <div class="trending-course-card">
+      <span class="badge">FREE</span>
+      <img src="img/IDE.avif" alt="Course Thumbnail" />
+      <h4>IDEs for Data Science</h4>
+      <p>★ 4.44 · 756+ learners</p>
+      <p>3 hrs</p>
+      <a href="courseregistration.html">View Course</a>
+    </div>
+  </div>
+</section>
+
+<div class="content">
+  <h1>New Courses</h1>
+</div>
+<section class="home-section">
+  <!-- Horizontal Scroll View -->
+  <div class="course-scroll-container">
+    <div class="trending-course-card">
+      <span class="badge">FREE</span>
+      <img src="img/full-stack.avif" alt="Course Thumbnail" />
+      <h4>Full Stack Web Development</h4>
+      <p>★ 4.47 · 16.3k+ learners</p>
+      <p>20 hrs</p>
+      <a href="courseregistration.html">View Course</a>
+    </div>
+    <div class="trending-course-card">
+      <span class="badge">FREE</span>
+      <img src="img/Resume.png" alt="Course Thumbnail" />
+      <h4>AI-Powered Resume Analyzer</h4>
+      <p>★ 4.6 · 1.7K+ learners</p>
+      <p>3 hrs</p>
+      <a href="courseregistration.html">View Course</a>
+    </div>
+    <div class="trending-course-card">
+      <span class="badge">FREE</span>
+      <img src="img/CiriticalThinking.jpg" alt="Course Thumbnail" />
+      <h4>Critical Thinking & Problem Solving</h4>
+      <p>★ 4.3 · 92.8K+ learners</p>
+      <p>2.6 hrs</p>
+      <a href="courseregistration.html">View Course</a>
+    </div>
+    <div class="trending-course-card">
+      <span class="badge">FREE</span>
+      <img src="img/CyberEssential.webp" alt="Course Thumbnail" />
+      <h4>Cybersecurity Essentials</h4>
+      <p>★ 4.7 · 986k+ learners</p>
+      <p>2.6 hrs</p>
+      <a href="courseregistration.html">View Course</a>
+    </div>
+    <div class="trending-course-card">
+      <span class="badge">FREE</span>
+      <img src="img/E-commerce.jpg" alt="Course Thumbnail" />
+      <h4>E-Commerce Store Using MERN Stack</h4>
+      <p>★ 4.27 · 8L+ learners</p>
+      <p>4.3 hrs</p>
+      <a href="courseregistration.html">View Course</a>
+    </div>
+    <div class="trending-course-card">
+      <span class="badge">FREE</span>
+      <img src="img/IDE.avif" alt="Course Thumbnail" />
+      <h4>IDEs for Data Science</h4>
+      <p>★ 4.44 · 756+ learners</p>
+      <p>3 hrs</p>
+      <a href="courseregistration.html">View Course</a>
+    </div>
+    <div class="trending-course-card">
+      <span class="badge">FREE</span>
+      <img src="img/Time.jpg" alt="Course Thumbnail" />
+      <h4>Time Management Techniques</h4>
+      <p>★ 3.98 · 2.9K+ learners</p>
+      <p>55 min</p>
+      <a href="courseregistration.html">View Course</a>
+    </div>
+    <div class="trending-course-card">
+      <span class="badge">FREE</span>
+      <img src="img/flutter-appdevelopment.jpg" alt="Course Thumbnail" />
+      <h4>App Development with Flutter</h4>
+      <p>★ 4.83 · 7.7K+ learners</p>
+      <p>5.9 hrs</p>
+      <a href="courseregistration.html">View Course</a>
+    </div>
+    
+  </div>
+</section>
+
+<div class="content">
+  <h2>Online CourseHub</h2>
+  <p>CourseHub offers an extensive range of free online courses designed to empower learners with essential skills across various domains. We have a library of free content with over courses with certifications in trending and high-demand fields like Data Science, Artificial Intelligence, Machine Learning, IT, Software Development, Cloud Computing, Cybersecurity, Digital Marketing, and more. Each course is curated by industry experts and includes practical demonstrations and real-world applications to ensure comprehensive learning.
+
+  </p>
+</div>
+
+    </div>
+  </section>
+
+
+</body>
+</html>
