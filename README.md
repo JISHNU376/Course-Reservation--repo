@@ -46,7 +46,7 @@ A web-based application designed to facilitate course reservations for students 
 # 🏗 Technical Architecture
 
 The Course Reservation System is designed using a **Model-View-Controller (MVC)** architecture to separate concerns, improve maintainability, and scale efficiently.
-
+<pre>
  ```mermaid 
  graph LR
     A[User (Browser)]
@@ -62,6 +62,7 @@ The Course Reservation System is designed using a **Model-View-Controller (MVC)*
 
 
 ``` 
+</pre>
 ---
 
 ## 🧩 Components Overview
