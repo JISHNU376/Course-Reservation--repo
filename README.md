@@ -49,7 +49,7 @@ The Course Reservation System is designed using a **Model-View-Controller (MVC)*
 
  ```mermaid 
  graph LR
-  A[User(Browser)] --> B[Frontend]
+  A[(User Browser)] --> B[Frontend]
     B --> C[HTML/CSS/JavaScript]
     B --> D[Backend]
     D --> E[Node.js + Express]
